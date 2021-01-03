@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<h3> SELECT STATES TO COMPARE FROM DROPDOWNS BELOW </h3>
+<br>
+<form method='POST'>
+	<div class='jumbotron'>
+		{{form.hidden_tag()}}
+		{{form.state1.label}}{{form.state1}}
+		<br><br>
+		{{form.state2.label}}{{form.state2}}
+		<br><br>
+		{{form.state3.label}}{{form.state3}}
+		<br><br>
+		{{form.state4.label}}{{form.state4}}
+		<br><br>
+		{{form.state5.label}}{{form.state5}}
+		<br><br>
+		{{form.state6.label}}{{form.state6}}
+		{{form.submit}}
+	</div>
+</form>
+
+
+{% endblock  %}

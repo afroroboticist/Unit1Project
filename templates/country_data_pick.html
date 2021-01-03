@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<div method='POST'>
+		<form method='POST'>
+	<div class='jumbotron'>
+		{{form.hidden_tag()}}
+		{{form.year.label}}{{form.state1}}
+		<br>
+		{{form.state2.label}}{{form.state2}}
+		<br>
+		{{form.state3.label}}{{form.state3}}
+		<br>
+		{{form.state4.label}}{{form.state4}}
+		<br>
+		{{form.state5.label}}{{form.state5}}
+		<br>
+		{{form.state6.label}}{{form.state6}}
+		{{form.submit}}
+	</div>
+</form>
+	<h1> HERE'S A PLOT SHOWING YOUR CHOSEN STATES </h1>
+	<img src={{file}} alt='STUDENT LOAN DEBT PLOTS' />
+
+	</div>
+
+{% endblock %}

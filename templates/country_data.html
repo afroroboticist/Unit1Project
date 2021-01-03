@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<div method='POST'>
+	<h1> HERE'S A PLOT SHOWING YOUR CHOSEN STATES </h1>
+	<br>
+	<form method='POST'>
+			{{form.hidden_tag()}}
+			{{form.year.label}}{{form.year}}
+			{{form.submit}}
+	</form>
+	<img src={{file}} alt='COUNTRY WIDE VIEW HERE' />
+
+	</div>
+
+{% endblock %}
