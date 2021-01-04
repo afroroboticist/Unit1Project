@@ -94,7 +94,7 @@ def view_compare():
 	                    xy=(rect.get_x() + rect.get_width() / 2, height),
 	                    xytext=(0, 3),  # 3 points vertical offset
 	                    textcoords="offset points",
-	                    ha='center', va='bottom')
+	                    ha='center', va='bottom', rotation=45)
 
 
 	legend_list=states
