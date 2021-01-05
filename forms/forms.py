@@ -81,8 +81,8 @@ class StatesForm(FlaskForm):
 	submit = SubmitField('SUBMIT')
 
 class YearForm(FlaskForm):
-	YEAR_CHOICES = ["0910","1011","1112","1213","1314",
-					"1415","1516","1617","1718","1819","1920"]
+	YEAR_CHOICES = ["2009/2010","2010/2011","2011/2012","2012/2013","2013/2014",
+					"2014/2015","2015/2016","2016/2017","2017/2018","2018/2019","2019/2020"]
 
 	year = SelectField(label='Year of Interest', choices=YEAR_CHOICES)
 	submit = SubmitField('DISPLAY')
