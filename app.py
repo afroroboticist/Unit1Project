@@ -1,4 +1,4 @@
-# app.py
+# app.py for Unit1Portfolio Project
 from flask import Flask, redirect, url_for, render_template
 import os
 from forms.forms import StatesForm, YearForm
@@ -44,8 +44,7 @@ def compare():
 	print('Does file exist? ', os.path.isfile(file_name))
 	if os.path.isfile(file_name):
 		os.remove(file_name)
-		print('Original file removed')
-		print('Does file exist? ', os.path.isfile(file_name))
+		#print('Does file exist? ', os.path.isfile(file_name))
 	global states
 	if form.validate_on_submit():
 		state1 = STATE_DICT[form.state1.data]
@@ -75,7 +74,7 @@ def view_compare():
 	student_loan_data['year'] = student_loan_data['Quarter'].apply(get_year)
 	df = student_loan_data.drop(labels=['OPE ID','Quarter','Sum of Recipients'], axis=1)
 	df['D_millions'] = round(df['Disbursements']/1000000 ,1)
-	df = df.sort_values('Q') #Sorting Q value to plot in right order
+	df = df.sort_values(['Q','year']) #Sorting Q value to plot in right order
 	df['Diversity'] = 0
 	condition = (df['State']==states[0])
 	condition1 = (df['State']==states[1]) 
