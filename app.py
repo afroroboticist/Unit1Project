@@ -216,7 +216,7 @@ def country_data():
 
 @app.route('/predict')
 def predict():
-	return render_template('home.html')
+	return render_template('time_series.html')
 
 if __name__ == "__main__":
 	app.run(debug=True)
