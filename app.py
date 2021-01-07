@@ -143,11 +143,22 @@ def view_compare():
 
 @app.route('/country_data', methods=['GET','POST'])
 def country_data():
-	
+
+	YEAR_CHOICES = {"2009/2010" : "0910",
+					"2010/2011" : "1011",
+					"2011/2012" : "1112",
+					"2012/2013" : "1213",
+					"2013/2014" : "1314",
+					"2014/2015" : "1415",
+					"2015/2016" : "1516",
+					"2016/2017" : "1617",
+					"2017/2018" : "1718",
+					"2018/2019" : "1819",
+					"2019/2020" : "1920"}
 	form=YearForm()
 
 	if form.validate_on_submit():
-		year = form.year.data
+		year = YEAR_CHOICES[form.year.data]
 		def get_quarter(data):
   			return data[:2]
 
@@ -216,7 +227,7 @@ def country_data():
 
 @app.route('/predict')
 def predict():
-	return render_template('home.html')
+	return render_template('time_series.html')
 
 if __name__ == "__main__":
 	app.run(debug=True)

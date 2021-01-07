@@ -5,11 +5,16 @@
 	<div method='POST'>
 	<h1> GEO-PLOTS SHOWING STUDENT LOAN DEBT DISTRUBUTION BY STATE PER YEAR </h1>
 	<br>
+	<div class="container">
 	<form method='POST'>
+		<ul>
 			{{form.hidden_tag()}}
-			{{form.year.label}}{{form.year}}
+			{{form.year.label}}  
+			{{form.year}}
 			{{form.submit}}
+		</ul>
 	</form>
+    </div>
 	<img src={{file}} alt='COUNTRY WIDE VIEW HERE' />
 
 	</div>
